@@ -1,0 +1,17 @@
+# login system using nested ifs
+print("Enter your username: ")
+str username = input()
+if username = "Test"{
+  print("Correct username!")
+  print("Enter your pin: ")
+  int pin = input()
+  if pin = 1234{
+    print("Correct pin! You are in!")
+  }
+  else{
+    print("Incorrect pin.")
+  }
+}
+else{
+print("Incorrect username.")
+}
