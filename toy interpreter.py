@@ -70,8 +70,8 @@ def evaluate_expression(expression):
             RPN_stack.append(operator_queue[i])
         else:  # If it's an operator, pop two operands and apply operation
             operation = operator_queue[i]
-            operand1 = RPN_stack.pop()
             operand2 = RPN_stack.pop()
+            operand1 = RPN_stack.pop()
             output = 0
             
             if operation == "*":
