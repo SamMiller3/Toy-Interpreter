@@ -1,0 +1,12 @@
+# raise to an exponent
+print("enter the base")
+int base = input()
+print("enter the expontent")
+int exponent = input()
+int output = base
+int output = output * base
+int exponent = exponent - 1
+if exponent > 1{
+    goto 7
+}
+print(output)
