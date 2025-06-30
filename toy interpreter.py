@@ -390,7 +390,7 @@ while i < len(instructions):
 
         # Check if it is an if-else statement
         elseFlag = False
-        if endif < len(instructions)-1 and lines[endif+1][0:4] == "else":
+        if endif < len(instructions)-1 and lines[endif][0:4] == "else":
             endif += 1
             elseFlag = True
 
