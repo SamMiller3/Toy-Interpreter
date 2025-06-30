@@ -1,0 +1,14 @@
+# fibonacci numbers
+print("how many numbers do you want?")
+int num = input()
+int count = 1
+int c = 0
+int b = 1
+int a = b + c
+print(a)
+int c = b
+int b = a
+int count = count + 1
+if count<num{
+    goto 7
+}
