@@ -1,5 +1,5 @@
 # Toy interpreter 26/06/25 to 30/06/25
-# For reference I didn't base this on any architecture or formal grammar I just made it up as I went along creatively for fun
+# For reference I didn't base this on any architecture I just made it up as I went along creatively for fun
 # To rediscover concepts and more of a challenge
 
 import os
@@ -47,7 +47,10 @@ def evaluate_expression(expression):
         if token[0].isalpha():  # Token is a variable
             operator_queue.append(int(data[token]))  # Queue the variable's value
         elif token[0].isdecimal():  # Token is a number
-            operator_queue.append(int(token))
+            if "." in token:
+                operator_queue.append(float(token))
+            else:
+                operator_queue.append(int(token))
         elif token == "*" or token == "+" or token == "-" or token == "/":  # Token is an operator
             if operator_stack == []:
                 operator_stack.append(token)
@@ -66,7 +69,7 @@ def evaluate_expression(expression):
     RPN_stack = []
 
     for i in range(len(operator_queue)):
-        if type(operator_queue[i]) == int:  # If it's a number, push to stack
+        if type(operator_queue[i]) == int or type(operator_queue[i]) == float:  # If it's a number, push to stack
             RPN_stack.append(operator_queue[i])
         else:  # If it's an operator, pop two operands and apply operation
             operation = operator_queue[i]
