@@ -1,0 +1,18 @@
+# Euclidean Algorithm
+print("enter number one")
+int a = input()
+print("enter number two")
+int b = input()
+
+if a > b{
+    int a = a - b
+}
+if a < b{
+    int b = b - a
+}
+if a = b{
+    print(a)
+}
+else{
+    goto 7
+}
