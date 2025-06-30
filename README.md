@@ -20,7 +20,6 @@ Features:
 * Expression handling respecting precedence of operations
 * Nested ifs
 * Functions w/ recursion
-* Static typed
 * Tokenisation and parsing before interpreting the parsed representation
 ```
 Data types:
