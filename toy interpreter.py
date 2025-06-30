@@ -1,5 +1,5 @@
 # Toy interpreter 26/06/25 to 30/06/25
-# For reference I didn't base this on any architecture I just made it up as I went along creatively for fun
+# For reference I didn't base this on any architecture or formal grammar I just made it up as I went along creatively for fun
 # To rediscover concepts and more of a challenge
 
 import os
