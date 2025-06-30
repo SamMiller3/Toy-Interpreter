@@ -30,9 +30,9 @@ Data types:
 * Strings
 ```
 
-##Explanation of syntax:
+## Explanation of syntax:
 
-###print:
+### print:
 
 variables can be printed:
 
@@ -47,4 +47,4 @@ print(42)
 print(4.2)
 ```
 
-###Assigning variables
+### Assigning variables
