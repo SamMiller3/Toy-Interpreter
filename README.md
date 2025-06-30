@@ -1,6 +1,6 @@
 # Toy Interpreter
 
-A toy interpreter I am currently writing in python 
+A toy interpreter I am currently writing in python from scratch for educational purposes
 
 Commands include: 
 
@@ -17,8 +17,8 @@ flt <variable name> = <data>
 
 Features:
 ```
-* Expression handling respecting precedence of operations
-* Nested ifs
+* Expression handling respecting precedence of operations using reverse polish notation
+* Nested ifs using if stack
 * Functions w/ recursion
 * Tokenisation and parsing before interpreting the parsed representation
 ```
