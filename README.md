@@ -30,7 +30,7 @@ A toy interpreter I am currently writing in python from scratch for educational 
 
 ## Example programs include:
 ```
-The `/test-programs` directory contains working examples:
+The `/Example-Programs` directory contains working examples:
 - Fibonacci sequence calculator
 - Euclidean algorithm for GCD
 - Login System (using nested ifs)
