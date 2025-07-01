@@ -45,7 +45,7 @@ def evaluate_expression(expression):
     
     for token in tokens:
         if token[0].isalpha():  # Token is a variable
-            operator_queue.append(int(data[token]))  # Queue the variable's value
+            operator_queue.append(data[token])  # Queue the variable's value
         elif token[0].isdecimal():  # Token is a number
             if "." in token:
                 operator_queue.append(float(token))
