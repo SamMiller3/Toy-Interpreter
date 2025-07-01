@@ -1,6 +1,10 @@
 # Toy Interpreter
 
-A toy interpreter I am currently writing in python from scratch for educational purposes
+A complete toy interpreter built from scratch in Python as an educational exploration of language implementation concepts. This project was intentionally developed without referencing formal grammar theory, Abstract Syntax Trees (ASTs), or existing interpreter architectures. Instead, it discovers fundamental compiler and interpreter concepts through hands-on experimentation and creative problem-solving.
+
+The interpreter implements a simple but complete programming language supporting variables, expressions, control flow, and I/O operations. It follows a multi-pass design with distinct tokenization, parsing, and execution phases - patterns that emerged naturally during development rather than being copied from textbooks. 
+
+The philosophy was to learn by rediscovering core concepts rather than implementing established patterns. This approach provides deeper insight into *why* formal methods exist and how language implementation challenges are solved.
 
 ## Commands include: 
 
