@@ -102,7 +102,11 @@ file_name = input("Enter file name: ")
 script_dir = os.path.dirname(__file__)  # Folder of the script
 file_path = os.path.join(script_dir, file_name)
 code = open(file_path)
-lines = code.readlines()
+
+# remove leading whitespace and replace blank lines with # so their 0 index can be checked while keeping them
+# to respect goto statements
+
+lines = [line.lstrip() if line.strip() else '#' for line in code.readlines()]
 
 # Token generation - parse source code into instructions and values
 instructions = []  # Stores instruction types (p, vi, vs, vf, if, etc.)
@@ -110,10 +114,6 @@ values = []        # Stores the values/parameters for each instruction
 
 for i in range(len(lines)):
     current_line = lines[i]
-
-    # Remove leading whitespace
-    while current_line[0] == " ":
-        current_line = current_line[1:]
 
     # Parse print statements - eg print("hello world")
     if current_line[0:5] == "print":
@@ -303,7 +303,7 @@ while i < len(instructions):
         value = values[i][j:]
         
         if "+" in value or "-" in value or "/" in value or "*" in value:  # Expression assignment
-            data[variable_name] = evaluate_expression(value)
+            data[variable_name] = int(evaluate_expression(value))
         elif value[0].isdecimal():  # Integer literal - eg int num = 3
             data[variable_name] = int(value)
         elif len(value) >= 7 and value[0:7] == "input()":  # Integer input
@@ -322,7 +322,7 @@ while i < len(instructions):
         value = values[i][j:]
         
         if "+" in value or "-" in value or "/" in value or "*" in value:  # Expression assignment
-            data[variable_name] = evaluate_expression(value)
+            data[variable_name] = float(evaluate_expression(value))
         elif value[0].isdecimal():  # Float literal - eg flt currency = 3.2
             data[variable_name] = float(value)
         elif len(value) >= 7 and value[0:7] == "input()":  # Float input
