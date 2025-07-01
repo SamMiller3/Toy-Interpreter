@@ -1,0 +1,33 @@
+# Binary search guessing game 
+print("Think of a number between 1 and 100 and I will guess it using a binary search!")
+int upper = 100
+int lower = 1
+int guess = upper + lower
+int guess = guess / 2
+print("Is your number this? (YES/NO)")
+print(guess)
+str answer = input()
+if answer = "YES"{
+    print("Thank you for playing!")
+    goto 33
+}
+if answer = "NO"{
+    print("Is your number bigger or smaller than that? (BIGGER/SMALLER)")
+    str answer = input()
+    if answer = "BIGGER"{
+        int lower = guess
+        goto 4
+    }
+    if answer = "SMALLER"{
+        int upper = guess
+        goto 4
+    }
+    else{
+        print("Please enter a valid answer")
+        goto 14
+    }
+}
+else{
+    print("Please enter a valid answer.")
+    goto 6
+}
