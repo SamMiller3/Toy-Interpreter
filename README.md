@@ -36,6 +36,7 @@ The `/Example-Programs` directory contains working examples:
 - Login System (using nested ifs)
 - Mathematical approximations (e.g., approximating e)
 - Binary Search guessing game
+- Raise base to an exponent
 ```
 
 ## Data types:
