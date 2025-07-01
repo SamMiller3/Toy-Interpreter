@@ -1,4 +1,4 @@
-# Approximate e to arbitrary precision using expression evaluation features
+# Approximate Eulers number to arbitrary precision using expression evaluation features
 print("Enter number of terms:")
 int n = input()
 flt e = 1.0
