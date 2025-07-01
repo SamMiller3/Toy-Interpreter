@@ -2,7 +2,7 @@
 
 A toy interpreter I am currently writing in python from scratch for educational purposes
 
-Commands include: 
+## Commands include: 
 
 ```
 print()
@@ -15,13 +15,26 @@ str <variable name> = <data>
 flt <variable name> = <data>
 ```
 
-Features:
+## Features at a glance:
 ```
-* Expression handling respecting precedence of operations using reverse polish notation
-* Nested ifs using if stack
-* Tokenisation and parsing before interpreting the parsed representation
+- Expression evaluation with proper operator precedence (using Reverse Polish Notation)
+- Nested control structures with stack-based management  
+- Multi-pass design: tokenization → parsing → execution
+- Dynamic typing with explicit type declarations
+- Simple but complete language supporting variables, conditionals, loops (via goto), and I/O
 ```
-Data types:
+
+## Example programs include:
+```
+The `/test-programs` directory contains working examples:
+- Fibonacci sequence calculator
+- Euclidean algorithm for GCD
+- Login System (using nested ifs)
+- Mathematical approximations (e.g., approximating e)
+- Binary Search guessing game
+```
+
+## Data types:
 
 ```
 * Integers
