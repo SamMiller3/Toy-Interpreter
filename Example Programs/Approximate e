@@ -1,0 +1,17 @@
+# Approximate e to arbitrary precision using expression evaluation features
+print("Enter number of terms:")
+int n = input()
+flt e = 1.0
+flt fact = 1.0
+flt i = 1.0
+
+if i > n{
+goto 15
+}
+flt fact = fact * i
+flt e = e + 1.0 / fact
+flt i = i + 1
+goto 7
+
+print("Approximated value of e:")
+print(e)
