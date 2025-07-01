@@ -5,14 +5,18 @@ A toy interpreter I am currently writing in python from scratch for educational 
 ## Commands include: 
 
 ```
-print()
-input()
-if{}
-else{}
-goto
-int <variable name> = <data>
-str <variable name> = <data>
-flt <variable name> = <data>
+- print()
+- input()
+- if <condition> {
+  # code
+  }
+- else{
+    # code
+    }
+- goto <value> 
+- int <variable name> = <data>
+- str <variable name> = <data>
+- flt <variable name> = <data>
 ```
 
 ## Features at a glance:
@@ -37,9 +41,9 @@ The `/test-programs` directory contains working examples:
 ## Data types:
 
 ```
-* Integers
-* Floats
-* Strings
+- Integers
+- Floats
+- Strings
 ```
 
 ## Explanation of syntax:
