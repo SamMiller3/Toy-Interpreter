@@ -152,6 +152,7 @@ else{
   print("incorrect!")
 }
 ```
+note else statements must start on the next line after } statements.
 
 Nested if statements can be used to check multiple conditions at once
 
