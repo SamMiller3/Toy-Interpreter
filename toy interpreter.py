@@ -226,9 +226,8 @@ for i in range(len(lines)):
                 end = True
             if ifs_left > 0 and lines[k][0] == "}":
                 ifs_left -= 1
-            if lines[k][0:2] == "if":
+            if lines[k][0:2] == "if" or lines[k][0:4] == "else":
                 ifs_left += 1
-        k += 1
         value += "," + str(k)
         values.append(value)
         
@@ -244,6 +243,10 @@ for i in range(len(lines)):
         current_line = current_line.replace("\n", "")
         instructions.append("goto")
         values.append(current_line)
+
+    elif current_line[0:4] == "else":
+        instructions.append("else")
+        values.append("")
 
     else:
         # Empty instruction for unrecognized lines
@@ -393,21 +396,21 @@ while i < len(instructions):
 
         # Check if it is an if-else statement
         elseFlag = False
-        if endif < len(instructions)-1 and lines[endif][0:4] == "else":
+        if endif < len(instructions)-1 and instructions[endif+1] == "else":
             endif += 1
             elseFlag = True
 
         # Evaluate the condition and jump if false
         if instructions[i][2] == "=" and value1 != value2:  # If condition is not true, skip over the block
-            i = endif - 1
+            i = endif
         elif instructions[i][2] == ">" and value1 <= value2: 
-            i = endif - 1
+            i = endif 
         elif instructions[i][2] == "<" and value1 >= value2: 
-            i = endif - 1
+            i = endif
         else:  # Statement is true, but if it's an else statement, skip over the else block
             if elseFlag == True:
                 j = endif
-                while instructions[j] != "}":
+                while instructions[j] != "}" and ifs_left == 0:
                     j += 1
                 if_stack.append(j)  # When we reach next }, update i to go to last location in if_stack
                 
@@ -415,10 +418,10 @@ while i < len(instructions):
     if instructions[i] == "goto":
         value = values[i]
         if "+" in value or "-" in value or "/" in value or "*" in value:  # Goto expression result
-            i = evaluate_expression(value) - 2
+            i = evaluate_expression(value) - 1
         elif value.isdecimal():  # Goto line number
-            i = int(value) - 2
+            i = int(value) - 1
         else:  # Goto variable value
-            i = data[value] - 2
+            i = data[value] - 1
         
     i += 1
