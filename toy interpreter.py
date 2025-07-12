@@ -1,4 +1,5 @@
-# Toy interpreter 26/06/25 to 30/06/25
+# Toy interpreter 26/06/25 to 01/07/25
+# updated on 12/07/2025 bug with else statements
 # For reference I didn't base this on any architecture I just made it up as I went along creatively for fun
 # To rediscover concepts and more of a challenge
 
